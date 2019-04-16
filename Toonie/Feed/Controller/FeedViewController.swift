@@ -34,6 +34,7 @@ final class FeedViewController: GestureViewController {
   // MARK: - Property
   
   private var tagAnimationView: AnimationView?
+  private var toonLists: [ToonList]?
   
   // MARK: - Life Cycle
   
@@ -44,6 +45,9 @@ final class FeedViewController: GestureViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    ToonListService.shared.requestToonList { result in
+      self.toonLists = result
+    }
   }
   
   // MARK: - IBAction
@@ -122,7 +126,9 @@ extension FeedViewController: UICollectionViewDataSource {
         .dequeueReusableCell(withReuseIdentifier: "favoriteCell",
                              for: indexPath) as? FavoriteCollectionViewCell
         else { return UICollectionViewCell() }
-      cell.setFavoriteCollectionViewCellProperties()
+      if let toonList = toonLists?[indexPath.item] {
+        cell.setFavoriteCollectionViewCellProperties(toonList)
+      }
       return cell
     }
     return UICollectionViewCell()

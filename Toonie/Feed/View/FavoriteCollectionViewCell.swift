@@ -29,9 +29,9 @@ final class FavoriteCollectionViewCell: UICollectionViewCell {
   // MARK: - Functions
   
   /// 컬렉션뷰셀 데이터 설정
-  func setFavoriteCollectionViewCellProperties() {
-    favoriteToonImageView.image = UIImage(named: "sample3")
-    favoriteToonTitleLabel.text = "감자"
-    favoriteToonTagLabel.text = "#직장인 #신혼"
+  func setFavoriteCollectionViewCellProperties(_ toonList: ToonList) {
+//    favoriteToonImageView.image = UIImage(named: toonList.)
+    favoriteToonTitleLabel.text = toonList.toonName
+    favoriteToonTagLabel.text = toonList.toonTagList![0]
   }
 }
