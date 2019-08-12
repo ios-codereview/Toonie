@@ -22,6 +22,11 @@ extension UIView {
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = color
     }
+    
+    static func instantiateFromXib(xibName: String) -> UIView? {
+        return UINib(nibName: xibName, bundle: nil)
+            .instantiate(withOwner: nil, options: nil).first as? UIView
+    }
 }
 
 extension UIImageView {

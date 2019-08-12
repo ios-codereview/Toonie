@@ -23,6 +23,7 @@ final class CommonUtility: NSObject {
     weak var mainNavigationViewController: MainNavigationController?
     weak var feedNavigationViewController: FeedNavigationController?
     weak var lookNavigationViewController: LookNavigationController?
+    weak var communityNavigationViewController: CommunityNavigationController?
     weak var myPageNavigationViewController: MyPageNavigationController?
     var myTagDic = [String: String]()
     

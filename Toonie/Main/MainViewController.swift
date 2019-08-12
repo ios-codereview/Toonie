@@ -375,8 +375,8 @@ final class MainViewController: GestureViewController {
         content.body = "오늘은 어떤 툰을 볼까요? 투니가 추천해줄게요!"
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 21
-        dateComponents.minute = 07
+        dateComponents.hour = 22
+        dateComponents.minute = 00
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: "DailyNoti", content: content, trigger: trigger)
@@ -387,7 +387,7 @@ final class MainViewController: GestureViewController {
         }
     }
     
-    //오늘의 추천 태그
+    /// 오늘의 추천 태그
     private func getCurationTagList(completion: @escaping ([String]) -> Void) {
         RecommendService.shared.getRecommends {  res in
             let tagCount: UInt32 = UInt32(res.count)

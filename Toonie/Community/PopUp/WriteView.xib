@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WriteView" customModule="Toonie" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="0EE-Sy-9Y8" id="wzz-kd-eb9"/>
+                <outlet property="confirmButton" destination="aF2-Px-TNR" id="lf4-uk-veb"/>
+                <outlet property="contentTextView" destination="GXZ-6C-JuO" id="UcU-lN-gs6"/>
+                <outlet property="deleteButton" destination="7HS-XL-SLz" id="OMc-hb-0mY"/>
+                <outlet property="titleLabel" destination="wKJ-2o-Eka" id="DjU-WV-Pu1"/>
+                <outlet property="writeView" destination="iN0-l3-epB" id="4Ly-2e-KRA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="279"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-za-3TM" userLabel="line">
+                    <rect key="frame" x="0.0" y="54" width="360" height="2"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="6Z9-xj-bg4"/>
+                        <constraint firstAttribute="height" constant="2" id="8FU-qB-qLn"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXZ-6C-JuO">
+                    <rect key="frame" x="21" y="80.000000000000014" width="318" height="139.33333333333337"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">요즘 직장상사 때문에 많이 힘든데
+힘낼 수 있는 인스타툰 추천 받을 수 있을까요?
+</string>
+                            <attributes>
+                                <color key="NSColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="제가 LA에 살때가 생각나는데요.">
+                            <attributes>
+                                <color key="NSColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HS-XL-SLz">
+                    <rect key="frame" x="253" y="243" width="30" height="29"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
+                    <state key="normal" title="삭제">
+                        <color key="titleColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF2-Px-TNR">
+                    <rect key="frame" x="303" y="243" width="37" height="29"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
+                    <state key="normal" title="글작성">
+                        <color key="titleColor" red="0.9882352941176471" green="0.68627450980392157" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EE-Sy-9Y8">
+                    <rect key="frame" x="29" y="243" width="30" height="29"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                    <state key="normal" title="취소">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKJ-2o-Eka">
+                    <rect key="frame" x="152" y="24" width="56" height="20"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                    <color key="textColor" name="main"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aF2-Px-TNR" firstAttribute="leading" secondItem="7HS-XL-SLz" secondAttribute="trailing" constant="20" id="1dD-p2-I0o"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aF2-Px-TNR" secondAttribute="trailing" constant="20" id="6J4-rN-krZ"/>
+                <constraint firstItem="wKJ-2o-Eka" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="AIM-qd-ngg"/>
+                <constraint firstItem="7HS-XL-SLz" firstAttribute="centerY" secondItem="0EE-Sy-9Y8" secondAttribute="centerY" id="G4s-PC-MHG"/>
+                <constraint firstItem="GXZ-6C-JuO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.884" id="XLy-4Y-hvs"/>
+                <constraint firstItem="0EE-Sy-9Y8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="27" id="Zhq-PK-pkG"/>
+                <constraint firstItem="CLp-za-3TM" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.38" id="ehS-EW-Wzh"/>
+                <constraint firstItem="GXZ-6C-JuO" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fa4-Lr-Lao"/>
+                <constraint firstItem="CLp-za-3TM" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="k3V-cV-RBU"/>
+                <constraint firstItem="CLp-za-3TM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mFd-GS-O9r"/>
+                <constraint firstItem="GXZ-6C-JuO" firstAttribute="top" secondItem="CLp-za-3TM" secondAttribute="bottom" constant="24" id="oh5-Go-9aG"/>
+                <constraint firstAttribute="top" secondItem="wKJ-2o-Eka" secondAttribute="top" constant="-24" id="rHc-yO-7II"/>
+                <constraint firstItem="0EE-Sy-9Y8" firstAttribute="top" secondItem="GXZ-6C-JuO" secondAttribute="bottom" constant="23.666666666666629" id="ukn-sh-ODO"/>
+                <constraint firstItem="0EE-Sy-9Y8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="29" id="vW9-bA-D6t"/>
+                <constraint firstItem="7HS-XL-SLz" firstAttribute="centerY" secondItem="aF2-Px-TNR" secondAttribute="centerY" id="ws2-Kn-9oJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-19.199999999999999" y="-49.876847290640399"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="main">
+            <color red="1" green="0.46666666666666667" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
