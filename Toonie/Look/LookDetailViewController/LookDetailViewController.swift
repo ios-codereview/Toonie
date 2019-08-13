@@ -68,6 +68,8 @@ final class LookDetailViewController: GestureViewController {
     /// 컬렉션뷰 데이터 설정
     private func setCollectionViewData(keyword: String) {
         if tag == "전체보기" {
+            // Review: Service는 Tesable 하지 않습니다.
+            // Service는 DI 로 주입을 받아야 합니다.
             KeywordToonAllListService
                 .shared
                 .getKeywordToonAllList(keyword: self.selectedKeyword,
@@ -79,6 +81,8 @@ final class LookDetailViewController: GestureViewController {
                 })
             
         } else {
+            // Review: Service는 Tesable 하지 않습니다.
+            // Service는 DI 로 주입을 받아야 합니다.
             LookToonOfTagService.shared
                 .getLookToonOfTag(toonTag: tag,
                                   completion: { [weak self] res in

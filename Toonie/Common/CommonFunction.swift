@@ -9,6 +9,22 @@
 import Foundation
 
 /// 배열 랜덤 n개 목록 만들기
+// Review: extesion 함수로 대체하는 것이 좋습니다.
+/*
+ extension Array {
+ func makeRandomList() -> [Element] {
+ var temporaryList = self
+ var randomList = [Element]()
+ for _ in 0..<self.count {
+ let index = Int(arc4random_uniform(UInt32((temporaryList.count - 1))))
+ randomList.append(temporaryList[index])
+ temporaryList.remove(at: index)
+ }
+ return randomList
+ }
+ }
+ */
+
 func makeRandomList<T>(_ list: [T], number: Int) -> [T] {
     var temporaryList = list
     var randomList: [T] = []

@@ -34,6 +34,16 @@ final class DetailToonViewController: GestureViewController {
     
     /// 뒤로 가기
     @IBAction func backButtonDidTap(_ sender: UIButton) {
+        // Review: 부모에 따라 종료하는 로직이 필요합니다.
+        /*
+        func dismissViewController(completion: (() -> Void)? = nil) {
+            if let navigationController = self.navigationController, navigationController.viewControllers.first != self {
+                navigationController.popViewController(animated: true)
+            } else {
+                self.dismiss(animated: true, completion: completion)
+            }
+        }
+        */
         self.navigationController?.popViewController(animated: true)
     }
     

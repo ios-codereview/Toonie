@@ -11,6 +11,9 @@ import Foundation
  API의 기본 형태
  Base URL과 JSONDecoder의 디코딩 전략 설정
  */
+// Review: dynamic 하게 path 를 변경할 수 없습니다.
+// Builder 패턴을 적용하는 것이 좋을 것 같습니다.
+// https://github.com/start-rxswift/MVVMGithubTDD/blob/master/TddMVVMGithub/Networking/URLRequestBuilder.swift
 class API {
     static let baseURL = "http://101.101.167.91:8080"
     

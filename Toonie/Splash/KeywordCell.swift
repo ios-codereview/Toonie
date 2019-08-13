@@ -21,6 +21,8 @@ final class KeywordCell: UICollectionViewCell {
     ///didTap 일어날때마다 cellBackgroundView 레이아웃 바꿔주는 함수
     func setBorderViewLayout(status: Bool) {
         if status == false { //선택안함
+            // Review: Style을 지정하는 객체로 관리되는 게 좋습니다.
+            // https://gist.github.com/felginep/0148b40e26b19d07e81c2e1e4f2ff3d2
             backView.setBorder(color: UIColor.init(white: 0, alpha: 0.4).cgColor,
                                borderWidth: 1)
             titleLabel.textColor = UIColor.init(white: 0, alpha: 0.4)

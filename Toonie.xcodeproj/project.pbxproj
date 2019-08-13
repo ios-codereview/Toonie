@@ -84,6 +84,7 @@
 		BB57D379599E229DE86C9F3A93FCBB0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C2C41933AFF35CEA1787DF94DFAF18 /* Assets.xcassets */; };
 		BBF3D671ABB1FA62C12A76D6A4CA52CE /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB68F163875F9F1F23D628BB5BB2372 /* UIView+.swift */; };
 		BCDEA1EC37D4D5343EE8EB89C50EC320 /* ChkToonieUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8675F866B2CC5FC1DDB18021BE67EABF /* ChkToonieUpdate.swift */; };
+		BD5672A82302422000702BA8 /* AssertMainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5672A72302422000702BA8 /* AssertMainThread.swift */; };
 		BD6A4E5D4CF8929196A01E3D1E55C9F4 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B4E73537A6A1DA88E2A6D9DCCCBB0 /* UIFont+.swift */; };
 		C51E480B0D1262D5020AF02E2B26CF37 /* ChkToonieUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383FC02752E41DED4201FA814927EC4C /* ChkToonieUpdateService.swift */; };
 		C9355A5FA67D262F35C7B8B185D2CA62 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD45CDB0C7E1A8A0FE2DB9C0C25B75 /* FeedViewController.swift */; };
@@ -227,6 +228,7 @@
 		B1D790C9FD3F0F7400B468DFA34CFE7D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B30F7F8BC0F68EC6C1F8E6A60BA9FADC /* logoAnimation_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoAnimation_0.png; sourceTree = "<group>"; };
 		B51EF193D9A44F9817A9B5B3AEBC43AE /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
+		BD5672A72302422000702BA8 /* AssertMainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertMainThread.swift; sourceTree = "<group>"; };
 		BED42905ADAEABD1D80B0CA4894DECCE /* ToonOfTagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToonOfTagService.swift; sourceTree = "<group>"; };
 		BF827ADC08C996D3C51D60BE675C7641 /* KeywordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsService.swift; sourceTree = "<group>"; };
 		C0C3160A8F2E10ED3113238FF01649F1 /* logoAnimation_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoAnimation_7.png; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 				7F9323F2A30BC1D6B5A75290A78E5EFF /* CommonFunction.swift */,
 				391E18129E3FD4CA97AD73AFBEA5D5A5 /* CommonUtility.swift */,
 				1FDCAA09CFF5C8C7AA1BC8E5B1E86DE0 /* GestureViewController.swift */,
+				BD5672A72302422000702BA8 /* AssertMainThread.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1016,6 +1019,7 @@
 				2F487FFA72B9B1CA1B571558775F065E /* LookViewController.swift in Sources */,
 				A31F7D42C07575D642B19CEE561AAD2A /* MainViewController.swift in Sources */,
 				3D7829A51FE8C5A1D54342BA93D42FE8 /* MyPage.swift in Sources */,
+				BD5672A82302422000702BA8 /* AssertMainThread.swift in Sources */,
 				087D071F4ACD5DD9DA5819762B27C20D /* MypageCollectionViewCell.swift in Sources */,
 				4A484BBF5FE067D98BFB7093168E7C90 /* MypageDetailCollectionViewCell.swift in Sources */,
 				09E62ABF5EFB2AD2310CD9D548C8018B /* MypageViewController.swift in Sources */,

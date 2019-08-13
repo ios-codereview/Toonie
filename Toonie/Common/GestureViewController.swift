@@ -9,6 +9,7 @@
 import UIKit
 
 ///모든 뷰 컨트롤러는 GestureViewController를 상속받음.
+// Review: GestureViewController 보단 BaseViewController 의 이름이 적절해 보입니다.
 class GestureViewController: UIViewController {
     
     ///viewwillAppear 호출시 꼭 super 넣어줄것

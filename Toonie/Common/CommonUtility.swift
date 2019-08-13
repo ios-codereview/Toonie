@@ -17,6 +17,8 @@ final class CommonUtility: NSObject {
     static let devSwitch: Bool = true
     
     //디자인 가이드 기준 Xs
+    // Review: ScreenUtils class 로 관리하는 게 좋습니다.
+    // https://github.com/bartleby/Core-iOS-Application-Architecture/blob/3679f773dbb0dac0eeb21937a7e24ee52f091172/Project%20Templates/iOS/iDevs.io/VIPER.xctemplate/Classes/Utils/Tweaks/DeviceTweak.swift
     static let deviceWidth: CGFloat  = 375
     static let deviceHeight: CGFloat = 812
     
@@ -29,6 +31,8 @@ final class CommonUtility: NSObject {
     static let sharedInstance = CommonUtility()
     
     ///userToken 가져옴
+    // Review: UserDefaults 를 별도로 관리하는 코드가 좋습니다.
+    // https://blog.canapio.com/117
     static func getUserToken() -> String? {
         return UserDefaults.standard.string(forKey: "token")
     }
@@ -51,8 +55,10 @@ final class CommonUtility: NSObject {
                            parameters: param)
     }
     
+    
     func compareToVersion(newVersion: String) -> Int {
         var curVersion = ""
+        // Review 별도의 Utils 객체로 Version 을 제공하는게 좋습니다.
         if let bundleVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             curVersion = bundleVersion
         }
@@ -96,6 +102,7 @@ final class CommonUtility: NSObject {
   
     ///앱 3번 실행마다 앱리뷰 요청
     func showStoreReview() {
+        // Review: "appStartCount" String literal 을 사용하지 않는 것이 좋습니다.
         let detailEnterCnt = UserDefaults.standard.integer(forKey: "appStartCount")
         
             if 3 <= detailEnterCnt {
@@ -104,3 +111,4 @@ final class CommonUtility: NSObject {
             }
     }
 }
+
