@@ -73,7 +73,7 @@ final class SplashViewController: GestureViewController {
             mode(true)
         } else {
             MyKeywordsService.shared.getMyKeywords { (myKeywords) in
-                if myKeywords?.count == 0 || myKeywords == nil {
+                if myKeywords?.isEmpty == true || myKeywords == nil {
                     mode(true)
                 } else {
                     mode(false)

@@ -120,7 +120,7 @@ final class RecommendViewController: GestureViewController {
 extension RecommendViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        if tagSelectArray.count == 0 {
+        if tagSelectArray.isEmpty {
             tagFrameView.bounds = CGRect.init(x: 0,
                                               y: 0,
                                               width: self.view.bounds.width,
