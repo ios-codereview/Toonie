@@ -13,6 +13,7 @@ struct TokenService: Requestable {
     static let shared = TokenService()
     
     ///토큰 발급
+    // Review: Error 처리 확실히!
     func getToken(completion : @escaping (String) -> Void) {
         get(API.token) { result in
             switch result {

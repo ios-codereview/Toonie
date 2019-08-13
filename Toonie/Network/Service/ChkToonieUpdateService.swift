@@ -12,6 +12,7 @@ struct ChkToonieUpdateService: Requestable {
     typealias NetworkData = ChkToonieUpdate
     static let shared = ChkToonieUpdateService()
     
+    // Review: Error 처리 확실히!
     func getUpdateInfo(completion : @escaping (ChkToonieUpdate) -> Void) {
         get(API.chkToonieUpdate) { result in
             switch result {

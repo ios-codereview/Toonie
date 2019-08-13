@@ -13,6 +13,7 @@ struct ToonListService: Requestable {
     static let shared = ToonListService()
     
     /// '당신을 위한 공감툰' 정보 조회
+    // Review: Error 처리 확실히!
     func getForYouToonList(completion: @escaping ([ToonList]?) -> Void) {
         get(API.forYouToons(CommonUtility.getUserToken() ?? "")) { result in
             switch result {

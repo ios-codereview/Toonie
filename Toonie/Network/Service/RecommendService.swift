@@ -13,6 +13,7 @@ struct RecommendService: Requestable {
     static let shared = RecommendService()
     
     ///큐레이션 태그 조회
+    // Review: Error 처리 확실히!
     func getRecommends(completion: @escaping ([String]) -> Void) {
         get(API.tags + "/curationtags") { result in
             switch result {

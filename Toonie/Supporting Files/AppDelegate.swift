@@ -53,16 +53,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
     }
-    
-    
 }
-
 
 extension AppDelegate : MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
         
         let dataDict:[String: String] = ["token": fcmToken]
+        // Review: FCM Token이 갱신되면 Server에 저장해야 합니다.
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
     }
     
@@ -71,7 +69,14 @@ extension AppDelegate : MessagingDelegate {
     }
 }
 
-
 extension AppDelegate: UNUserNotificationCenterDelegate {
+    // Review: Push message background 처리 필요.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+    }
     
+    // Review: Push message foreground 처리 필요.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+    }
 }

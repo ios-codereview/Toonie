@@ -157,6 +157,7 @@ final class FeedViewController: GestureViewController {
     
     /// 컬렉션뷰 리로드
     private func reloadCollectionView() {
+        // Review: Eugene W. Myers’s의 차이 알고리즘을 적용한 performBatchUpdates 을 고려할 수 있습니다.
         self.forYouCollectionView.reloadData()
         self.recentCollectionView.reloadData()
         self.favoriteCollectionView.reloadData()

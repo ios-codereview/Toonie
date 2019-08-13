@@ -12,6 +12,7 @@ struct CurationTagService: Requestable {
     typealias NetworkData = ToonOfTag
     static let shared = CurationTagService()
     
+    // Review: Error 처리 확실히!
     func getCurationTagList(tagName: String,
                             completion: @escaping ([ToonInfoList]?) -> Void) {
         let tagURL = API.tags + "/curationtags/" + tagName

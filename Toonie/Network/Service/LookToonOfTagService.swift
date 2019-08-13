@@ -13,6 +13,7 @@ struct LookToonOfTagService: Requestable {
     static let shared = LookToonOfTagService()
     
     /// 태그로 툰 정보 조회
+    // Review: Error 처리 확실히!
     func getLookToonOfTag(toonTag: String,
                           completion: @escaping (ToonOfTag) -> Void) {
         get(API.tags + "/" + toonTag) { (result) in

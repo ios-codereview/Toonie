@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Review: encode를 하지 않기 때문에 Decodable 이 적절해 보입니다.
 struct ChkToonieUpdate: Codable {
     let forcedUpdate: Bool?
     let forceInfo: ForceInfo?

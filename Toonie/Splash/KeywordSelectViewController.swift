@@ -37,6 +37,7 @@ final class KeywordSelectViewController: GestureViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // Review: 네트워크 작업이나 io 작업은 viewDidAppear에서 하는 것이 좋습니다.
         setKeywordValue()
         setSelectedKeywordValue()
     }
@@ -74,6 +75,7 @@ final class KeywordSelectViewController: GestureViewController {
     }
     
     func setLayoutMode(bool: Bool) {
+        // Review: UI 업데이트도 필요합니다.
         layoutMode = bool
     }
     
@@ -129,6 +131,12 @@ extension KeywordSelectViewController: UICollectionViewDelegate, UICollectionVie
         
         cell.titleLabel.text = keywords[indexPath.row]
         
+        // Review: 데이터 속성을 UI Cell에 직접 지정하는 것보단 데이터 모델을 만들어서 상태를 관리한느 게 좋습니다.
+        /*
+         struct CellState {
+         let cellStatus: Bool
+         }
+         */
         cell.cellStatus = false
         
         //사용자가 선택한 키워드는 활성화처리
@@ -144,7 +152,9 @@ extension KeywordSelectViewController: UICollectionViewDelegate, UICollectionVie
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        // Review: CollectionView 이기 때문에 row 보단 item 이 적절합니다.
         let keyword = keywords[indexPath.row]
+        // Review: UIFont.systemFont 보단 실제 적용된 font로 높이 계산을 해야 합니다.
         let width = Int(keyword.widthWithConstrainedHeight(height: 49, font: UIFont.systemFont(ofSize: 20)))
         
         return CGSize(width: width + 20, height: 50)
@@ -181,10 +191,14 @@ extension KeywordSelectViewController: UICollectionViewDelegate, UICollectionVie
 }
 
 extension KeywordSelectViewController: UICollectionViewDelegateFlowLayout {
+    // Review: 불필요한 코드입니다.
     private func collectionView(collectionView: UICollectionView,
                                 layout collectionViewLayout: UICollectionViewLayout,
                                 sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+        
+        
         let keyword = keywords[indexPath.row]
+        
         let width = Int(keyword.widthWithConstrainedHeight(height: 49, font: UIFont.systemFont(ofSize: 20)))
         
         return CGSize(width: width + 20, height: 50)

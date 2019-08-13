@@ -13,6 +13,7 @@ struct ToonOfTagService: Requestable {
     static let shared = ToonOfTagService()
     
     /// 태그로 툰 정보 조회
+    // Review: Error 처리 확실히!
     func getToonOfTag(completion: @escaping ([ToonInfoList]?) -> Void) {
         get(API.tags+"/고양이") { result in
             switch result {

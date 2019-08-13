@@ -58,6 +58,7 @@ final class ToonWebViewController: UIViewController, WKNavigationDelegate {
     
     /// 웹뷰를 띄우기
     private func loadWebView() {
+        
         let url = URL(string: toonUrl ?? "https://www.instagram.com/")
         if let url = url {
             let request = URLRequest(url: url)

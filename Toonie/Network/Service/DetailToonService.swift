@@ -13,6 +13,7 @@ struct DetailToonService: Requestable {
     static let shared = DetailToonService()
     
     /// 툰 상세 화면 정보 조회
+    // Review: Error 처리 확실히!
     func getDetailToon(toonId: String, completion: @escaping (DetailToon?) -> Void) {
         get(API.toons+"/\(toonId)") { result in
             switch result {

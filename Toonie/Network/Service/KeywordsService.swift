@@ -96,6 +96,7 @@ class KeywordToonAllListService: Requestable {
     typealias NetworkData = ToonLists
     static let shared = KeywordToonAllListService()
 
+    // Review: Error 처리 확실히!
     func getKeywordToonAllList(keyword: String,
                                completion: @escaping ([ToonList]?) -> Void) {
         get(API.toons + "/keyword/\(keyword)") { result in

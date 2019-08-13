@@ -87,6 +87,7 @@ final class DetailToonViewController: GestureViewController {
             "toonId": detailToon?.toonID
         ]
         
+        // Review: 네트워크 통신 중 사용자에게 로딩을 보여줘야 합니다.
         FavoriteService.shared
             .postFavoriteToon(params: body as [String: Any],
                               completion: {

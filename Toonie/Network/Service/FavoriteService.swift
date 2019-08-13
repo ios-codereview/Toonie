@@ -13,6 +13,7 @@ struct FavoriteService: Requestable {
     static let shared = FavoriteService()
     
     ///선택한 툰 즐겨찾기 post 통신
+    // Review: Error 처리 확실히!
     func postFavoriteToon(params: [String: Any],
                           completion: @escaping () -> Void) {
         post((API.myFavoriteList(CommonUtility.getUserToken() ?? "")), params: params) { result in
